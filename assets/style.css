@@ -72,7 +72,6 @@ nav a {
   font-size: 1.3em;
   padding: 0 10px 3px 10px;
   color: #7fc5c6;
-  text-decoration: none;
   border-bottom: 3px solid #7fc5c6;
   white-space: nowrap;
 }
@@ -118,9 +117,6 @@ nav a {
   border-right: 4px solid #394e69;
   text-align: right;
   padding: 5px 10px 0 0;
-}
-
-.section-title h2 {
   font-size: 3rem;
 }
 
@@ -152,10 +148,8 @@ nav a {
 }
 
 #first-project {
-  flex: 1;
   min-height: 500px;
   min-width: 100%;
-  max-width: 100%;
 }
 
 .project h2 {
