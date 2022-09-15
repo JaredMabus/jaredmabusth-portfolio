@@ -1,9 +1,9 @@
-/* Color Pallete
-    heading: #2B2E35
-    link: #7FC5C6
-    section headers color: #384E6A
-    section border color: #394E69
-*/
+:root {
+  --light-blue: #7fc5c6; /* nav links */
+  --header-blue: #2b2e35; /* header bg and font color */
+  --blue-dark: #384e6a; /* section font */
+}
+
 /* Global styles */
 * {
   box-sizing: border-box;
@@ -13,7 +13,7 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
-  color: #2b2e35;
+  color: var(--header-blue);
 }
 
 body {
@@ -46,8 +46,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  color: #2b2e35;
-  background-color: #2b2e35;
+  color: var(--header-blue);
+  background-color: var(--header-blue);
   width: 100%;
   padding: 5px 5rem 15px 0;
 }
@@ -55,7 +55,7 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  background-color: #7fc5c6;
+  background-color: var(--light-blue);
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 
@@ -71,8 +71,8 @@ nav li {
 nav a {
   font-size: 1.3em;
   padding: 0 10px 3px 10px;
-  color: #7fc5c6;
-  border-bottom: 3px solid #7fc5c6;
+  color: var(--light-blue);
+  border-bottom: 3px solid var(--light-blue);
   white-space: nowrap;
 }
 
@@ -80,7 +80,7 @@ nav a {
   display: flex;
   justify-content: end;
   align-items: end;
-  background-image: url("../assets/images/image-bg.png");
+  background-image: url("./images/image-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -93,7 +93,7 @@ nav a {
   margin: 0 7rem 1rem 0;
   padding: 10px;
   position: absolute;
-  background-color: #7fc5c6;
+  background-color: var(--light-blue);
 }
 
 /* Main content */
@@ -111,7 +111,7 @@ nav a {
   flex-direction: column;
   justify-content: start;
   align-items: end;
-  color: #394e6a;
+  color: var(--blue-dark);
   font-size: 2rem;
   min-width: 250px;
   border-right: 4px solid #394e69;
@@ -140,7 +140,7 @@ nav a {
 
 .project {
   position: relative;
-  border: 5px solid #7fc5c6;
+  border: 5px solid var(--light-blue);
   flex: 1;
   min-width: 45%;
   min-height: 175px;
@@ -178,7 +178,7 @@ nav a {
   bottom: 1rem;
   left: 0;
   padding: 0.7rem;
-  background-color: #7fc5c6;
+  background-color: var(--light-blue);
 }
 
 .project-description p {
@@ -202,13 +202,12 @@ footer ul {
 footer a {
   font-size: 1.1rem;
   padding: 0 5px 3px 5px;
-  color: #384e6a;
-  border-bottom: 3px solid #384e6a;
+  color: var(--blue-dark);
+  border-bottom: 3px solid var(--blue-dark);
 }
 
 @media screen and (max-width: 956px) {
   header {
-    display: flex;
     flex-direction: column;
   }
 
@@ -218,7 +217,6 @@ footer a {
   }
 
   .section {
-    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
@@ -230,7 +228,7 @@ footer a {
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    border-bottom: 4px solid #394e69;
+    border-bottom: 4px solid var(--blue-dark);
     border-right: none;
     width: 100%;
     margin-bottom: 15px;
